@@ -1,3 +1,5 @@
+export type themeTypes = "basic" | "shadi";
+export type buttonTypes = "primary" | "secondary";
 export type CustomButtonProps = {
   style?: { [key: string]: string };
   disabled?: boolean;
@@ -6,4 +8,5 @@ export type CustomButtonProps = {
   children: string;
   className?: string;
   rounded?: boolean;
+  theme?: themeTypes;
 };

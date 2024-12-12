@@ -1,0 +1,35 @@
+.loader-modal-box-wrapper {
+  width: 100%;
+  height: 100%;
+  .loader-modal-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px 26px 30px;
+    row-gap: 24px;
+    height: 700px;
+  }
+  .spinner-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    opacity: 0.8;
+  }
+}
+
+.love-progress-bar .MuiLinearProgress-barColorPrimary {
+  background-color: rgba(128, 0, 0, 1) !important;
+}
+
+.love-progress-bar .MuiLinearProgress-colorPrimary {
+  background-color: white !important;
+}
+
+.basic-progress-bar .MuiLinearProgress-barColorPrimary {
+  background-color: #0483df !important;
+}
+
+.basic-progress-bar .MuiLinearProgress-colorPrimary {
+  background-color: white !important;
+}
