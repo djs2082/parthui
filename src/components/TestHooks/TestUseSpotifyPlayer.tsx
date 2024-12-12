@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useSpotifyPlayer } from "./../../hooks/useSpotifyPlayer";
-import SpotifyPlayer from "../SpotifyPlayer";
+import { SpotifyPlayer } from "../SpotifyPlayer";
 const TestUseSpotifyPlayer = () => {
   const [tracks, setTracks] = useState([]);
   const [play, setPlay] = useState(false);

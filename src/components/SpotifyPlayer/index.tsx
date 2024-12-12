@@ -9,7 +9,7 @@ interface SpotifyPlayerProps {
   trackToPlay: TrackToPlay;
 }
 
-const SpotifyPlayer: React.FC<SpotifyPlayerProps> = ({
+export const SpotifyPlayer: React.FC<SpotifyPlayerProps> = ({
   styles,
   className,
   randomPlay = false,
@@ -114,4 +114,3 @@ const SpotifyPlayer: React.FC<SpotifyPlayerProps> = ({
     </div>
   );
 };
-export default SpotifyPlayer;
