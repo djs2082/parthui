@@ -1,6 +1,6 @@
 {
   "name": "parthui",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "A React component Library",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -69,7 +69,7 @@
     "rollup-plugin-scss": "^4.0.0",
     "rollup-plugin-strip": "^1.2.2",
     "rollup-plugin-terser": "^7.0.2",
-    "sass": "^1.82.0",
+    "sass": "^1.83.0",
     "sass-embedded": "^1.81.1",
     "storybook": "^8.4.6",
     "typescript": "^5.7.2",

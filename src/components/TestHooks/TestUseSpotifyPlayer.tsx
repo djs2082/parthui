@@ -8,8 +8,8 @@ const TestUseSpotifyPlayer = () => {
   const spotifySongPlayerRef = useRef<HTMLDivElement>(null);
 
   const spotifyPlayer = useSpotifyPlayer({
-    playListId: process.env.SPOTIFY_PLAYLIST_ID,
-    clientId: process.env.SPOTIFY_CLIENT_ID,
+    playListId: "5iLgD55NtxGmVFvjy8Fhpl",
+    clientId: "912ef809e5244d4394e52b7dfced0c92",
     redirectUrl: "http://localhost:3000",
   });
   const { fetchPlayListTracks, getSongFrame } = spotifyPlayer;

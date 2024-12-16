@@ -4,3 +4,7 @@ export { SpotifyPlayer } from "./SpotifyPlayer";
 export { Modal } from "./Modal";
 export { BasicLoader } from "./Loader";
 export { LoveLoader } from "./Loader";
+export {
+  SpotifyPlayerProvider,
+  useSpotifyPlayerContext,
+} from "./SpotifyPlayerContext";
