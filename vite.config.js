@@ -1,13 +1,15 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      parthui: path.resolve(__dirname, "./src"),
-    },
+  optimizeDeps: {
+    include: ['parthui'],
+    force: true
   },
-  root: "./playground", // Set the playground as the root
-});
+  server: {
+    watch: {
+      ignored: ['!**/node_modules/parthui/**']
+    }
+  }
+})

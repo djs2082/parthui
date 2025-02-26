@@ -29,8 +29,8 @@ const TestUseS3FileManager: React.FC<TestUseS3FileManagerProps> = ({
     config: {
       region: "us-east-2",
       credentials: {
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+        accessKeyId: "AKIAYP2HNPMTG4MXG6UI",
+        secretAccessKey: "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",
       },
     },
     configFileName: configFileName,
@@ -45,8 +45,11 @@ const TestUseS3FileManager: React.FC<TestUseS3FileManagerProps> = ({
   }, [loaderCount]);
 
   const printTheData = (data: dataType | string, size: string = "32px") => {
-    // return <div>Hel</div>;
-    if (!data) return <div></div>;
+    console.log(data);
+    // console.log(typeof data);
+    // console.log(Array.isArray(data));
+    // // return <div>Hel</div>;
+    if (!data) return <div>KD</div>;
     if (typeof data !== "object") {
       return (
         <div style={{ border: "2px solid green", fontSize: size }}>{data}</div>
@@ -57,45 +60,52 @@ const TestUseS3FileManager: React.FC<TestUseS3FileManagerProps> = ({
         return printTheData(value, size);
       });
     }
-
-    return Object.keys(data).map((key) => {
-      return (
-        <div
-          style={{
-            display: "flex",
-            width: "fit-content",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundColor: "rgb(125,125,125)",
-            border: `1px solid ${Array.isArray(data) ? "red" : ""}`,
-            // border: `1px solid ${typeof data !== "object" ? "red" : "blue"}`,
-          }}
-        >
-          <span
-            style={{
-              border: "2px solid grey",
-              color: "white",
-              padding: "8px",
-              fontSize: size,
-            }}
-          >
-            {key} <span style={{ color: "blue" }}>{"\u2192"}</span>
-          </span>
-          <span
-            style={{
-              backgroundColor: "rgb(0,0,0)",
-              border: "2px solid black",
-              color: "white",
-              padding: "8px",
-              fontSize: size,
-            }}
-          >
-            {printTheData(data[key], size)}{" "}
-          </span>
-        </div>
-      );
-    });
+    console.log(Object.keys(data));
+    return (
+      <div>
+        {Object.keys(data).map((key) => {
+          console.log("LKJKLJKLJKLJLKJ");
+          return (
+            <div
+              style={{
+                display: "flex",
+                width: "fit-content",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "rgb(125,125,125)",
+                border: `1px solid ${Array.isArray(data) ? "red" : ""}`,
+                // border: `1px solid ${typeof data !== "object" ? "red" : "blue"}`,
+              }}
+            >
+              <span
+                style={{
+                  border: "2px solid grey",
+                  color: "white",
+                  padding: "8px",
+                  fontSize: size,
+                }}
+              >
+                <div>Hello</div>
+                {key} <span style={{ color: "blue" }}>{"\u2192"}</span>
+              </span>
+              <span
+                style={{
+                  backgroundColor: "rgb(0,0,0)",
+                  border: "2px solid black",
+                  color: "white",
+                  padding: "8px",
+                  fontSize: size,
+                }}
+              >
+                {printTheData(data[key], size)}{" "}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    );
   };
+
   return (
     <div>
       <div style={{ display: "flex", flexDirection: "column", rowGap: "32px" }}>
@@ -212,6 +222,7 @@ const TestUseS3FileManager: React.FC<TestUseS3FileManagerProps> = ({
           </div>
         </div>
       </div>
+      <div>Here</div>
       <div style={{ margin: "32px" }}>{printTheData(fetchedData)}</div>
       <BasicLoader count={loaderCount} progress={uploadProgress} />
     </div>

@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { IconButton, ThemeProvider } from "@mui/material";
-// import CloseIcon from "@mui/icons-material/Close";
+import CloseIcon from "@mui/icons-material/Close";
 import "./index.scss";
 import { CustomModalProps } from "./type";
 import { getTheme } from "./themes";
@@ -52,7 +52,10 @@ const CustomModal: React.FC<CustomModalProps> = ({
             {/* modal Header */}
             <div id="modal-header-content" className="modal-header-content">
               <span id="modal-close-button" className="modal-close-button">
-                <IconButton onClick={onHide}>{/* <CloseIcon /> */}</IconButton>
+                <IconButton onClick={onHide}>
+                  {" "}
+                  <CloseIcon />{" "}
+                </IconButton>
               </span>
             </div>
             {/* modal content */}
