@@ -29,8 +29,8 @@ const TestUseS3FileManager: React.FC<TestUseS3FileManagerProps> = ({
     config: {
       region: "us-east-2",
       credentials: {
-        accessKeyId: "AKIAYP2HNPMTG4MXG6UI",
-        secretAccessKey: "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",
+        accessKeyId: process.env.VITE_AWS_ACCESS_KEY_ID || "",
+        secretAccessKey: process.env.VITE_AWS_SECRET_ACCESS_KEY || "",
       },
     },
     configFileName: configFileName,
